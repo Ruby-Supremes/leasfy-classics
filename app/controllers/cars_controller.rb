@@ -1,13 +1,13 @@
 class CarsController < ApplicationController 
-    
-    validates :availability_status, presence: true, inclusion: {in: Availability_statuses}
-  
-    def isAvailable?
-      availability_status == "True"
+   # POST /cars
+  # POST /cars.json
+  def create
+    @car = Car.new(car_params)
+    if @car.save
+      flash[:success] = "New car added!"
+      redirect_to @car
+    else
+      render :new
     end
-    
-    def isReserved?
-      availability_status == "true"
+  end 
     end
-    
-end
