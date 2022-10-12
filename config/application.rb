@@ -22,6 +22,15 @@ module LeasfyClassics
     # Only loads a smaller set of middleware suitable for API only apps.
     # Middleware like session, flash, cookies can be added back manually.
     # Skip views, helpers and assets when generating a new resource.
+
+    # allow our app to render custom error messages
+    config.exceptions_app = self.routes
+
+    config.middleware.use ActionDispatch::Cookies
+    config.middleware.use ActionDispatch::Session::CookieStore
+
+    config.action_dispatch.cookies_same_site_protection = :strict
+
     config.api_only = true
   end
 end
