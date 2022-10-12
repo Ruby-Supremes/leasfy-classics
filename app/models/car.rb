@@ -1,5 +1,5 @@
 class Car < ApplicationRecord
-    belongs_to :Reservation
+    #belongs_to :Reservation
     #has_many  :Reviews
 
     validates :availability_status, presence: true, inclusion: {in: Availability_statuses}
@@ -10,4 +10,5 @@ class Car < ApplicationRecord
     
     def isReserved?
       availability_status == "false" 
+end
 end
