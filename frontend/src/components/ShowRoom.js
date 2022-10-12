@@ -29,7 +29,7 @@ function ShowRoom() {
                     </div>
                     <div className="col">
                         <div className="card">
-                        <img src="https://cdn.luxe.digital/media/2021/11/26104812/best-classNameic-cars-vintage-Aston-Martin-DB5-1964-old-luxe-digital%402x.jpg" className="card-img-top" alt="..."/>
+                        <img src="https://cdn.luxe.digital/media/2021/11/26104936/best-classic-cars-vintage-old-luxe-digital%402x.jpg" className="card-img-top" alt="..."/>
                         <div className="card-body">
                             <h5 className="card-title">Card title</h5>
                             <p className="card-text float-start">⭐ 5</p>
@@ -92,7 +92,7 @@ function ShowRoom() {
                         </div>
                         <div className="col">
                             <div className="card">
-                            <img src="https://cdn.luxe.digital/media/2021/11/26104812/best-classNameic-cars-vintage-Aston-Martin-DB5-1964-old-luxe-digital%402x.jpg" className="card-img-top" alt="..."/>
+                            <img src="https://cdn.luxe.digital/media/2021/11/26104936/best-classic-cars-vintage-old-luxe-digital%402x.jpg" className="card-img-top" alt="..."/>
                             <div className="card-body">
                                 <h5 className="card-title">Card title</h5>
                                 <h6 className="card-text">Some brief description</h6>
@@ -137,7 +137,7 @@ function ShowRoom() {
                         </div>
                         <div className="col">
                             <div className="card">
-                            <img src="https://cdn.luxe.digital/media/2021/11/26104812/best-classNameic-cars-vintage-Aston-Martin-DB5-1964-old-luxe-digital%402x.jpg" className="card-img-top" alt="..."/>
+                            <img src="https://cdn.luxe.digital/media/2021/11/26104936/best-classic-cars-vintage-old-luxe-digital%402x.jpg" className="card-img-top" alt="..."/>
                             <div className="card-body">
                                 <h5 className="card-title">Card title</h5>
                                 <h6 className="card-text">Some brief description</h6>
