@@ -11,3 +11,52 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+*{
+  font-family: manjari, Verdana, Geneva, Tahoma, sans-serif;
+}
+
+ul{
+  padding: 5px;
+}
+
+.nav-header ul{
+  text-align: center;
+}
+
+li{
+  list-style: none;
+  display: inline-block;
+  padding: 10px;
+}
+
+li a{
+  text-decoration: none;
+  color: sienna;
+}
+.clear{
+  clear: right;
+}
+
+.carousel-item{
+  height: 400px;
+}
+.carousel-item img{
+  background-size: inherit;
+}
+
+.title{
+  color: sienna;
+  font-size: 18px;
+  padding: 10px;
+  text-align: center;
+}
+
+.card img{
+  height: 180px;
+}
+
+.popular-choice{
+  background-color: rgb(214, 207, 207);
+  height: 350px;
+}

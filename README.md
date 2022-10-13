@@ -14,3 +14,46 @@ rails s
 npm start --prefix frontend
 ```
 # test main branch
+
+# Routes  
+#Users
+## Get all users
+```
+GET '/users'
+```
+## Get individual user
+ ```
+GET '/users/:id'
+```
+## Create new user
+ ```
+POST '/users'
+```
+## Update user
+ ```
+PATCH '/users/:id'
+```
+## Delete user
+ ```
+DELETE '/users/:id'
+```
+# Cars
+## Get all cars
+```
+GET '/cars'
+```
+## Get individual car
+ ```
+GET '/car/:id'
+```
+## Create new car
+ ```
+POST '/cars'
+```
+## Update car
+ ```
+PATCH '/cars/:id'
+```
+## Delete car
+ ```
+DELETE '/cars/:1'

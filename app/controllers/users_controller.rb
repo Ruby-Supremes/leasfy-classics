@@ -22,7 +22,7 @@ class UsersController < ApplicationController
         render json: user
     end
 
-    def destroy
+    def logout
         user = find_user
         user.destroy
         head :no_content

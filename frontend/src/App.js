@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css'
@@ -41,6 +42,27 @@ function App() {
       </div>
     </Router>
   )
+=======
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
+import Header from './components/Header';
+import Home from "./components/Home";
+import ShowRoom from "./components/ShowRoom";
+
+// import './App.css';
+
+function App() {
+  return (
+    <div className="App">
+      <Router>
+        <Header />
+        <Routes>
+          <Route exact path="/" element={<Home />}></Route>
+          <Route exact path="/showroom" element={<ShowRoom />}></Route>
+        </Routes>
+      </Router>
+    </div>
+  );
+>>>>>>> c20cb50b4e51deb8612f344b1037f8ef77504da5
 }
 
 export default App
