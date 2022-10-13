@@ -4,8 +4,7 @@ class CreateCars < ActiveRecord::Migration[7.0]
       t.string :name
       t.string :description
       t.integer :hiring_price
-      t.string :owner_id
-      t.boolean :availability_status
+      t.integer :user_id
 
       t.timestamps
     end
