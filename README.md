@@ -16,13 +16,14 @@ npm start --prefix frontend
 # test main branch
 
 # Routes  
+#Users
 ## Get all users
 ```
 GET '/users'
 ```
 ## Get individual user
  ```
-GET '/users/:1'
+GET '/users/:id'
 ```
 ## Create new user
  ```
@@ -30,9 +31,29 @@ POST '/users'
 ```
 ## Update user
  ```
-PATCH '/users/:1'
+PATCH '/users/:id'
 ```
 ## Delete user
  ```
-DELETE '/users/:1'
+DELETE '/users/:id'
 ```
+# Cars
+## Get all cars
+```
+GET '/cars'
+```
+## Get individual car
+ ```
+GET '/car/:id'
+```
+## Create new car
+ ```
+POST '/cars'
+```
+## Update car
+ ```
+PATCH '/cars/:id'
+```
+## Delete car
+ ```
+DELETE '/cars/:1'
