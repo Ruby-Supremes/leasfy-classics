@@ -2,7 +2,7 @@ class ApplicationController < ActionController::API
     include ActionController::Cookies
 
     def authorize
-        unauthorized unless session.include? :user_id
+        :unauthorized unless session.include? :user_id
     end
 
     def authorize_car_owner

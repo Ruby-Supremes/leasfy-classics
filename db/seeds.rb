@@ -6,9 +6,9 @@
 #   movies = Movie.create([{ name: "Star Wars" }, { name: "Lord of the Rings" }])
 #   Character.create(name: "Luke", movie: movies.first)
 User.create([
-    # {first_name:"David",last_name:"Mwenje",username:"mwenje",email:"mwenje@gmail.com",password:"pass123",user_type:2},
-    # {first_name:"Martin",last_name:"Mwangi",username:"mart",email:"mart@gmail.com",password:"pass123",user_type:1},
-    # {first_name:"Maryann",last_name:"Onyango",username:"maryann",email:"maryann@gmail.com",password:"pass123",user_type:2},
+    {first_name:"David",last_name:"Mwenje",username:"mwenje",email:"mwenje@gmail.com",password:"pass123",user_type:2},
+    {first_name:"Martin",last_name:"Mwangi",username:"mart",email:"mart@gmail.com",password:"pass123",user_type:1},
+    {first_name:"Maryann",last_name:"Onyango",username:"maryann",email:"maryann@gmail.com",password:"pass123",user_type:2},
     {first_name:"Faith",last_name:"Gatwiri",username:"prof",email:"prof@gmail.com",password:"pass123",user_type:1}
 ])
 
@@ -41,4 +41,3 @@ User.create([
 #                     This MG comes from a true enthusiast who has devoted his entire life to restoring English classic cars, including a lot of MGs. The MGA that we offer for sale here has been extensively restored and is both optically and technically in very good condition. A photo report of the restoration is available.
 #                     ",hiring_price:50000,user_id:3,image1:"https://assets.carandclassic.com/uploads/cars/mg/C1511697/1956-mg-mga-6347f6723d53e.jpg?ar=4%3A3&auto=&fill=blur&fit=fillmax&h=600&ixlib=php-3.3.1&max-w=800&q=75&w=800&s=474ad9da23817ac229da48fb73458243",image2:"https://assets.carandclassic.com/uploads/cars/mg/C1511697/1956-mg-mga-6347f6723e40a.jpg?ar=4%3A3&auto=&fill=blur&fit=fillmax&h=600&ixlib=php-3.3.1&max-w=800&q=75&w=800&s=b4223497f7fb2256eec48554582fe626",image3:"https://assets.carandclassic.com/uploads/cars/mg/C1511697/1956-mg-mga-6347f6723eb0b.jpg?ar=4%3A3&auto=&fill=blur&fit=fillmax&h=600&ixlib=php-3.3.1&max-w=800&q=75&w=800&s=d5ab92e64aadc17488e01b4ae66e31ff",image4:"https://assets.carandclassic.com/uploads/cars/mg/C1511697/1956-mg-mga-6347f6723f202.jpg?ar=4%3A3&auto=&fill=blur&fit=fillmax&h=600&ixlib=php-3.3.1&max-w=800&q=75&w=800&s=8b423d58bdd8bfd1fcc1b3228f359864",image5:"https://assets.carandclassic.com/uploads/cars/mg/C1511697/1956-mg-mga-6347f6723f8fd.jpg?ar=4%3A3&auto=&fill=blur&fit=fillmax&h=600&ixlib=php-3.3.1&max-w=800&q=75&w=800&s=1bf2db1aedfcc71233af82a819b7fefa"}
 # ])
-

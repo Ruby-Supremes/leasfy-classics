@@ -7,6 +7,7 @@ Rails.application.routes.draw do
   # Users routes
   resources :cars
   resources :users
+  resources :reservations
   # get '/users', to: 'users#index'
   # get '/users/:id', to: 'users#show'
   post '/login', to: 'sessions#login'
