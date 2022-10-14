@@ -1,39 +1,42 @@
 import React,{ useState } from 'react'
 import { Link } from 'react-router-dom'
+import {DropDownListComponent} from '@syncfusion/ej2-react-dropdowns'
 
 function Signup() {
-    const [first, setfirst] = useState('')
-    const [last, setlast] = useState('')
+    const [first, setFirst] = useState('')
+    const [last, setLast] = useState('')
     const [email, setEmail] = useState('')
     const [pass, setPass] = useState('')
-    const [errors, setErrors] = useState([])
+    const [user, setUser] = useState('')
+    // const [errors, setErrors] = useState([])
 
-    const handleSubmit (e){
-        e.preventDefault()
-        const user = {
-          first,
-          last,
-          email,
-          pass
-        }
-        fetch(`/user`,{
-          method:"post",
-          headers:{'Content-Type':'application/json'},
-          body:JSON.stringify(user)
-        })
-        .then( res =>{
-          if(res.ok){
-            res.json().then(setCurrentUser)
-          } else {
-            res.json().then( e => setErrors(object.entries(e.errors.flat())))
-          }
-        })
+    // const handleSubmit (e){
+    //     e.preventDefault()
+    //     const user = {
+    //       first,
+    //       last,
+    //       email,
+    //       pass
+    //     }
+    //     fetch(`/user`,{
+    //       method:"post",
+    //       headers:{'Content-Type':'application/json'},
+    //       body:JSON.stringify(user)
+    //     })
+    //     .then( res =>{
+    //       if(res.ok){
+    //         res.json().then(setCurrentUser)
+    //       } else {
+    //         res.json().then( e => setErrors(object.entries(e.errors.flat())))
+    //       }
+    //     })
     
-      } 
+    //   } 
 
   return (
-    <div>
-        <>
+    <div className='form-container'>
+    <>
+    <h2>Signup</h2>
         <form className='form1'>
         <label for="first-name">First name</label>
           <input
@@ -48,8 +51,16 @@ function Signup() {
             value={last}
             type="last-name"
             placeholder="Last Name"
-            id="email"
-            name="email"
+            id="last-name"
+            name="last-name"
+        />
+         <label for="user-name">User Name</label>
+          <input
+            value={user}
+            type="user-name"
+            placeholder="User Name"
+            id="user-name"
+            name="user-name"
         />
         <label for="email">email</label>
           <input
@@ -59,6 +70,8 @@ function Signup() {
             id="email"
             name="email"
         />
+        <div className='sync'> Usertype<DropDownListComponent dataSource={["Admin","owner","client"]}></DropDownListComponent></div>
+       
         <label for="Password">Password</label>
           <input
             value={pass}

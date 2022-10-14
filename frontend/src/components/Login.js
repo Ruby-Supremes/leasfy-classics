@@ -14,6 +14,7 @@ function Login(props) {
   return (
     <div className='form-container'>
       <>
+      <h2>Login</h2>
         <form className='form2'>
           <label htmlfor="email">email</label>
           <input
