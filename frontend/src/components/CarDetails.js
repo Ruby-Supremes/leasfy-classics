@@ -1,6 +1,18 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
+import { useParams } from 'react-router-dom';
+
 
 function CarDetails() {
+    const [car, setCar] = useState("")
+
+    const {id} =  useParams()
+
+    useEffect(() => {
+        fetch(`http://localhost:3000/cars/${id}`)
+        .then(res => res.json())
+        .then(res => setCar(res))
+    }, [id])
+    console.log(car)
   return (
     <div>
         <div className="container">
@@ -12,14 +24,14 @@ function CarDetails() {
             </div>
             <div className="image-reference mt-3">
                 <div className="row gx-5">
-                <div className="col-md-6 main-image"><img src="https://hips.hearstapps.com/toc.h-cdn.co/assets/16/14/1952-rolls-royce-silver-dawn_1.jpg"/></div>
+                <div className="col-md-6 main-image"><img src={car.image1}/></div>
                 <div className="col-md-6 sub-images">
                     <div className="row row-cols-2 row-cols-md-2 g-4">
                     {/* <div className="col"><img src="https://www.carcovers.com/media/carcover/resource/classiccar.jpg"/></div> */}
-                    <div className="col"><img src="https://cdn.shopify.com/s/files/1/0262/2626/2064/products/0015_1952-bentley-mk-vi-park-ward-coupe_4_600x.jpg?v=1658864918"/></div>
-                    <div className="col"><img src="https://www.rosnermotorsports.com/blogs/3693/wp-content/uploads/2021/07/rolls-royce-silver-dawn.jpg"/></div>
-                    <div className="col"><img src="https://www.pngitem.com/pimgs/m/172-1725071_1953-rolls-royce-silver-dawn-drophead-hd-png.png"/></div>
-                    <div className="col"><img src="https://cdn.dealeraccelerate.com/charles/1/1018/2762/790x1024/1952-rolls-royce-silver-dawn-drophead-coupe"/></div>
+                    <div className="col"><img src={car.image2}/></div>
+                    <div className="col"><img src={car.image3}/></div>
+                    <div className="col"><img src={car.image4}/></div>
+                    <div className="col"><img src={car.image5}/></div>
                     </div>
                 </div>
                 </div>
@@ -29,14 +41,14 @@ function CarDetails() {
                     <div className='row'>
                         <span className='hr hr-blurry'>
                             <div className='owner-details float-start'>
-                                <h6 className='font-weight-bold'>Car Owner Lorem Ipsum</h6>
+                                <h6 className='font-weight-bold'>{car.name}</h6>
                                 <h6><span className='font-weight-bold'>Contact :</span><br/>Email: loremipsum@gmail.com<br/> Phone: +254451515151</h6>
                             </div>
                             <img className="float-end user-avatar" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR-SnDtnoTbs_JJtNW62ALeA4gKPtpCGcQ5CnVEJNNAddxjuLwrbo1c16rExrxYL4xLmIw&usqp=CAU"/>
                         </span>
                     </div><hr/>
                     <div className='summary Details mt-5'>
-                    <div className="title-head">More Details</div>
+                    <div className="title-head">{car.description}</div>
                         <table class="table mt-2">
                             <tbody>
                                 <tr>
