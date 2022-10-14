@@ -1,11 +1,29 @@
 class ReservationsController < ApplicationController
     rescue_from ActiveRecord::RecordNotFound, with: :render_not_found_response
     rescue_from ActiveRecord::RecordInvalid, with: :render_unprocessable_entity_response
+    before_action :authorize
+
     def create
-        reservation =  reservation.create!(reservation_params)
+        reservation =  Reservation.create!(reservation_params)
         render json: reservation
     end
     
+    # def index
+    #     reservations = Reservation.all
+    #     render json: reservations
+    # end
+
+    # def show
+    #     reservation = find_reservation
+    #     render json: reservation
+    # end
+
+    # def update
+    #     reservation = find_reservation
+    #     reservation.update!(reservation_params)
+    #     render json: reservation
+    # end
+
     def destroy
         reservation = find_reservation
         reservation.destroy
