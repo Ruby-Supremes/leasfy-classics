@@ -3,11 +3,14 @@ import { Link } from 'react-router-dom'
 import {DropDownListComponent} from '@syncfusion/ej2-react-dropdowns'
 
 function Signup() {
-    const [first, setFirst] = useState('')
-    const [last, setLast] = useState('')
-    const [email, setEmail] = useState('')
-    const [pass, setPass] = useState('')
-    const [user, setUser] = useState('')
+    const [userDetails, setUserDetails] = useState({
+      first_name:'',
+      last_name:'',
+      username:'',
+      email:'',
+      password:'',
+      user_type:0
+    })
     // const [errors, setErrors] = useState([])
 
     // const handleSubmit (e){
@@ -33,48 +36,86 @@ function Signup() {
     
     //   } 
 
+    const handleSubmit = (e) =>{
+      e.preventDefault()
+            fetch('http://localhost:3000/users',{
+              method:"post",
+              headers:{'Content-Type':'application/json'},
+              body:JSON.stringify({
+                first_name:userDetails.first_name,
+                last_name:userDetails.last_name,
+                username:userDetails.username,
+                email:userDetails.email,
+                password:userDetails.password,
+                user_type:userDetails.user_type
+              })
+            })
+            .then( res =>{
+              // if(res.ok){
+              //   res.json().then(res => console.log(res))
+              // } else {
+              //   res.json().then( e => console.log(e))
+              // }
+              res.json()
+            }).then(r=>console.log())
+        }
+
+
+    function handleChange(event) {
+      setUserDetails({
+        ...userDetails,
+        [event.target.name]: event.target.value,
+        
+      });
+    }
+    console.log(userDetails)
+
   return (
     <div className='form-container'>
     <>
     <h2>Signup</h2>
-        <form className='form1'>
-        <label for="first-name">First name</label>
+        <form className='form1' onSubmit={handleSubmit}>
+        <label for="first_name">First name</label>
           <input
-            value={first}
-            type="first-name"
+            type="first_name"
             placeholder="First Name"
-            id="first-name"
-            name="first-name"
+            id="first_name"
+            name="first_name"
+            onChange={handleChange}
          />
-        <label for="last-name">Last Name</label>
+        <label for="last_name">Last Name</label>
           <input
-            value={last}
-            type="last-name"
+            type="last_name"
             placeholder="Last Name"
-            id="last-name"
-            name="last-name"
+            id="last_name"
+            name="last_name"
+            onChange={handleChange}
         />
-         <label for="user-name">User Name</label>
+         <label for="username">User Name</label>
           <input
-            value={user}
-            type="user-name"
-            placeholder="User Name"
-            id="user-name"
-            name="user-name"
+            type="username"
+            placeholder="UserName"
+            id="username"
+            name="username"
+            onChange={handleChange}
         />
         <label for="email">email</label>
           <input
-            value={email}
             type="email"
             placeholder="youremail@gmail.com"
             id="email"
             name="email"
+            onChange={handleChange}
         />
-        <div className='sync'> Usertype<DropDownListComponent dataSource={["Admin","owner","client"]}></DropDownListComponent></div>
-       
+        <div className='sync'> 
+        <select name="user_type" onChange={handleChange} aria-label="Default select example">
+          <option value="2">Admin</option>
+          <option value="1">Car Owner</option>
+          <option value="0">Client</option>
+      </select>   
+      </div>       
         <label for="Password">Password</label>
           <input
-            value={pass}
             type="password"
             placeholder="*******"
             id="password"

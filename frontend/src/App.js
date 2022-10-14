@@ -15,7 +15,7 @@ function App() {
   return (
     <div className="App">
       <Router>
-        <Header />
+        {/* <Header /> */}
         <Routes>
           <Route exact path="/" element={<Home />}></Route>
           <Route exact path="/showroom" element={<ShowRoom />}></Route>
