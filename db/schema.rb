@@ -19,6 +19,13 @@ ActiveRecord::Schema[7.0].define(version: 2022_10_13_115257) do
     t.integer "user_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "image1"
+    t.string "image2"
+    t.string "image3"
+    t.string "image4"
+    t.string "image5"
+    t.string "location"
+    t.integer "rating", default: 0
     t.index ["user_id"], name: "index_cars_on_user_id"
   end
 

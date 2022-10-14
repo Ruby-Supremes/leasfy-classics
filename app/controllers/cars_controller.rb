@@ -1,15 +1,12 @@
 class CarsController < ApplicationController 
-    rescue_from ActiveRecord::RecordNotFound, with: :render_not_found_response
-    rescue_from ActiveRecord::RecordInvalid, with: :render_unprocessable_entity_response
-
-
-    before_action :authorize
-    before_action :authorize_car_owner
-    skip_before_action :authorize_car_owner, only: [:index,:show]
-
-    def create
-      car =  Car.create!(car_params)
-      render json: car
+  rescue_from ActiveRecord::RecordNotFound, with: :render_not_found_response
+  rescue_from ActiveRecord::RecordInvalid, with: :render_unprocessable_entity_response
+  before_action :authorize, only:[:create, :update, :destroy]
+  before_action :authorize_car_owner
+  skip_before_action :authorize_car_owner, only:[:index,:show]
+  def create
+    car =  Car.create!(car_params)
+    render json: car
   end
   
   def index
