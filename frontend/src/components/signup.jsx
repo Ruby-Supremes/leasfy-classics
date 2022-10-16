@@ -10,30 +10,6 @@ function Signup() {
       password:'',
       user_type:0
     })
-    // const [errors, setErrors] = useState([])
-
-    // const handleSubmit (e){
-    //     e.preventDefault()
-    //     const user = {
-    //       first,
-    //       last,
-    //       email,
-    //       pass
-    //     }
-    //     fetch(`/user`,{
-    //       method:"post",
-    //       headers:{'Content-Type':'application/json'},
-    //       body:JSON.stringify(user)
-    //     })
-    //     .then( res =>{
-    //       if(res.ok){
-    //         res.json().then(setCurrentUser)
-    //       } else {
-    //         res.json().then( e => setErrors(object.entries(e.errors.flat())))
-    //       }
-    //     })
-    
-    //   } 
 
     const handleSubmit = (e) =>{
 

@@ -8,6 +8,10 @@ class SessionsController < ApplicationController
             render json: { error: "Invalid email or password. Please verify your credentials and try again " }, status: :unauthorized
         end
     end
+
+    def user_profile
+        
+    end
   
     def logout
         session.delete :user_id
