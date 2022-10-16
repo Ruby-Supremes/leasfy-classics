@@ -1,6 +1,9 @@
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
+import Car from './components/Car';
 import Header from './components/navbar';
 import Home from "./components/Home";
+import Login from './components/Login';
+import Reservation from './components/Reservation';
 import ShowRoom from "./components/ShowRoom";
 import CarDetails from "./components/CarDetails"
 import Signup from './components/signup';
@@ -12,7 +15,7 @@ function App() {
   return (
     <div className="App">
       <Router>
-        <Header />
+        {/* <Header /> */}
         <Routes>
           <Route exact path="/" element={<Home />}></Route>
           <Route exact path="/showroom" element={<ShowRoom />}></Route>

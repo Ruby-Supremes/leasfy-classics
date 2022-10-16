@@ -74,6 +74,11 @@ function Home() {
     setCurrentSlide(newSlide);
   }
   return (
+<<<<<<< HEAD
+    <div>
+      {/* <h4>Home</h4> */}
+    </div>
+=======
     <>
       <div style={sliderMain}>
         <div style={leftArrow} onClick={goPrevious}>&#60;</div>
@@ -112,6 +117,7 @@ function Home() {
       </div>
       </div>
     </>
+>>>>>>> 5f0bcafae2d7377eb6ac05ad7c1db9f90931baab
   )
 }
 
